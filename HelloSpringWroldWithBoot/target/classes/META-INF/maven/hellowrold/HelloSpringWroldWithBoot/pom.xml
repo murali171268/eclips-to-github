@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>hellowrold</groupId>
+  <artifactId>HelloSpringWroldWithBoot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- We need to write the instruction to maven framwork to download the Spring Boot Jars -->
+  
+  <!-- this parent is common and must for every project, this section will be used to download the main framework jars -->
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>2.1.6.RELEASE</version> <!--later if change/upgrade the version no need to change any child dependencies version,
+  	                                  because of the feature no need to say any version in dependencies also-->
+  </parent>
+  
+  
+  <!--bellow is the <dependencies> is a child to the parent, the following entry will download the parent spring boot jar,
+      used to download the features of frameword -->
+  <dependencies>
+  	<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>  <!-- the dependency web is for web application project -->
+   	</dependency>
+  </dependencies>
+  
+  
+</project>
